@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>k-means result</title>
+    <style>
+        h1{
+            font-family:Courier New, monospace;
+            font-size: 75px;
+            color: #05aa81;
+            display:flex;
+            margin-top:0px;
+            padding-left: 0px;
+ 
+            align-content: center;
+            justify-content: center;
+        }
+        h3 {
+            display:flex;
+            font-family:Courier New, monospace;
+            font-size: 20px;
+            color: #0570aa;
+        }
+
+        h4 {
+            display:flex;
+            font-family:Courier New, monospace;
+            font-size: 15px;
+            color: #05aa81;
+        }
+    </style>
+</head>
+<body>
+<h1 > RESULTAT </h1>
+
+<ul>
+    <h3> le nombre de culster est:</h3>
+    {{nb_cluster}}
+    <h3> les culsters sont :</h3>
+    {% for item in cluster %}
+        <h4> culster :</h4>
+       {% for ligne in item %}
+            <li>{{ligne}}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+</body>
+</html>
